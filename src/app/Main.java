@@ -21,7 +21,7 @@ public class Main {
         count++;
         radius = 4.5;
         height = 8.5;
-        System.out.println("\n" + count +  ") The volume of cylinder with radius " + radius +
+        System.out.println("\n" + count + ") The volume of cylinder with radius " + radius +
                 " and height " + height + " is " + volume(radius, height) + ".");
 
         count++;
@@ -45,14 +45,23 @@ public class Main {
         int b = scan.nextInt();
         double result = powNumbers(a, b);
         System.out.print("Result of " + a + "^" + b + " equals " + result + "\n");
+
+        count++;
+        System.out.print("\n" + count + ") Enter int number:");
+        int quota = scan.nextInt();
+        System.out.print("Input text line:");
+        String line = scanner.nextLine();
+        replicate(quota, line);
     }
 
     public static int square(int num) {
         return num * num;
     }
+
     public static double volume(double radius, double height) {
         return Math.pow(radius, 2) * height * Math.PI;
     }
+
     public static int getSumma(int... numbers) {
         int summa = 0;
         for (int num : numbers) {
@@ -60,10 +69,18 @@ public class Main {
         }
         return summa;
     }
+
     public static String reverseRow(String row) {
         return new StringBuilder(row).reverse().toString();
     }
+
     public static double powNumbers(int a, int b) {
         return Math.pow(a, b);
+    }
+
+    public static void replicate(int quota, String line) {
+        for (int i = 1; i <= quota; i++) {
+            System.out.println(line);
+        }
     }
 }
