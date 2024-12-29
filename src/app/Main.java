@@ -37,6 +37,14 @@ public class Main {
         String reversed = reverseRow(original);
         System.out.println("Original row is: " + original +
                 "\nReversed row is: " + reversed);
+
+        count++;
+        System.out.print("\n" + count + ") Enter the first int number:");
+        int a = scan.nextInt();
+        System.out.print("Enter the second int number:");
+        int b = scan.nextInt();
+        double result = powNumbers(a, b);
+        System.out.print("Result of " + a + "^" + b + " equals " + result + "\n");
     }
 
     public static int square(int num) {
@@ -54,5 +62,8 @@ public class Main {
     }
     public static String reverseRow(String row) {
         return new StringBuilder(row).reverse().toString();
+    }
+    public static double powNumbers(int a, int b) {
+        return Math.pow(a, b);
     }
 }
