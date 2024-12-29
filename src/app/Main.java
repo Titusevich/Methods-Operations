@@ -29,6 +29,14 @@ public class Main {
         String strArray = Arrays.toString(array);
         System.out.println("\n" + count + ") Array of numbers: " + strArray +
                 "\nSum of all array elements equals " + getSumma(array) + ".");
+
+        count++;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("\n" + count + ") Input string line:");
+        String original = scanner.nextLine();
+        String reversed = reverseRow(original);
+        System.out.println("Original row is: " + original +
+                "\nReversed row is: " + reversed);
     }
 
     public static int square(int num) {
@@ -43,5 +51,8 @@ public class Main {
             summa += num;
         }
         return summa;
+    }
+    public static String reverseRow(String row) {
+        return new StringBuilder(row).reverse().toString();
     }
 }
